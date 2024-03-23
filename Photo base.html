@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Base</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Oswald, sans-serif; /* Modificado para Oswald */
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Background branco */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centralizar horizontalmente */
+        }
+        header {
+            background-color: #0077be; /* Cor do cabeçalho */
+            color: #fff;
+            padding: 10px;
+            width: 100%; /* Largura total */
+            text-align: center; /* Centralizar texto horizontalmente */
+        }
+        header .login-register {
+            position: absolute; /* Posicionamento absoluto */
+            top: 10px; /* 10px a partir do topo */
+            right: 10px; /* 10px a partir da direita */
+            font-size: 20px; /* Tamanho de fonte 20 */
+            color: #fff; /* Cor do texto branco */
+        }
+        header .login-register a {
+            color: #fff; /* Cor do texto branco */
+            text-decoration: none;
+            font-size: 20px; /* Tamanho de fonte 30 */
+        }
+        header h1 {
+            font-family: 'Oleo Script', cursive; /* Fonte Oleo Script */
+            font-size: 32px; /* Tamanho de fonte 32 */
+            margin: 0; /* Remover margem padrão */
+            line-height: 1; /* Ajustar altura da linha */
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+            width: 100%; /* Largura total */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s; /* Transição suave de cor */
+        }
+        nav a:hover {
+            color: hsl(201, 100%, 74%); /* Mudar cor para #00196E quando passar o mouse */
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%; /* Largura total */
+            position: fixed; /* Posicionamento fixo */
+            bottom: 0; /* Alinhar ao fundo */
+        }
+        /* Formulário de login */
+        #login-form {
+            display: none;
+            position: absolute; /* Posicionamento absoluto */
+            top: 50%; /* Centralizar verticalmente */
+            right: 10%; /* 10% a partir da direita */
+            transform: translateY(-50%); /* Centralizar verticalmente */
+        }
+        #login-form .login-container {
+            background-color: #ccc; /* Cor de fundo cinza */
+            padding: 20px; /* Espaçamento interno */
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+        #login-form input {
+            margin: 5px;
+            padding: 10px;
+            width: 200px;
+        }
+        #login-form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Photo Base</h1>
+            <div class="login-register"> <!-- Div para opções de login e registro -->
+                <a href="#" onclick="toggleLoginForm()">Login</a> | <a href="#">Register</a>
+            </div>
+        </header>
+        <nav>
+            <a href="#">Página Principal</a>
+            <a href="#">Suas Fotos</a>
+            <a href="#">Preset</a>
+            <a href="#">Nuvem</a>
+            <a href="#">Clientes</a>
+            <a href="#">Planos</a>
+            <a href="#">Vendas</a>
+        </nav>
+        <main>
+            <!-- Conteúdo principal -->
+            <h2>Crie sua conta ou faça login</h2>
+        </main>
+        <footer>
+            <p>&copy; Site criado e desenvolvido por Clara Cavalcanti.</p>
+        </footer>
+        <!-- Formulário de login -->
+        <form id="login-form">
+            <div class="login-container">
+                <input type="text" placeholder="Login"><br>
+                <input type="password" placeholder="Senha"><br>
+                <input type="submit" value="Entrar">
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        function toggleLoginForm() {
+            var loginForm = document.getElementById("login-form");
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+            } else {
+                loginForm.style.display = "none";
+            }
+        }
+    </script>
